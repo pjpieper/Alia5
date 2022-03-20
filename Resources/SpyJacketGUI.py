@@ -34,6 +34,8 @@ class Ui_MainWindow(object):
         self.LedButton.setFlat(True)
         self.LedButton.setObjectName("LedButton")
         self.gridLayout.addWidget(self.LedButton, 1, 0, 1, 1)
+
+        #Maps Icon
         self.MapsButton = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.MapsButton.setText("")
         icon1 = QtGui.QIcon()
@@ -43,6 +45,8 @@ class Ui_MainWindow(object):
         self.MapsButton.setFlat(True)
         self.MapsButton.setObjectName("MapsButton")
         self.gridLayout.addWidget(self.MapsButton, 1, 3, 1, 1)
+
+        #Spotify Icon
         self.SpotifyButton = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.SpotifyButton.setText("")
         icon2 = QtGui.QIcon()
@@ -52,6 +56,8 @@ class Ui_MainWindow(object):
         self.SpotifyButton.setFlat(True)
         self.SpotifyButton.setObjectName("SpotifyButton")
         self.gridLayout.addWidget(self.SpotifyButton, 0, 1, 1, 1)
+
+        #Doom Icon
         self.DoomButton = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.DoomButton.setText("")
         icon3 = QtGui.QIcon()
@@ -61,6 +67,8 @@ class Ui_MainWindow(object):
         self.DoomButton.setFlat(True)
         self.DoomButton.setObjectName("DoomButton")
         self.gridLayout.addWidget(self.DoomButton, 0, 3, 1, 1)
+
+        #Raspberry Button
         self.RasButton = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.RasButton.setText("")
         icon4 = QtGui.QIcon()
@@ -70,6 +78,8 @@ class Ui_MainWindow(object):
         self.RasButton.setFlat(True)
         self.RasButton.setObjectName("RasButton")
         self.gridLayout.addWidget(self.RasButton, 1, 2, 1, 1)
+
+        #Discord Icon
         self.DiscordButton = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.DiscordButton.setText("")
         icon5 = QtGui.QIcon()
@@ -78,8 +88,10 @@ class Ui_MainWindow(object):
         self.DiscordButton.setIconSize(QtCore.QSize(78, 78))
         self.DiscordButton.setFlat(True)
         self.DiscordButton.setObjectName("DiscordButton")
-        self.DiscordButton.clicked.connect(self.clickMethod)
+        self.DiscordButton.clicked.connect(self.clickDiscord)
         self.gridLayout.addWidget(self.DiscordButton, 0, 4, 1, 1)
+
+        #Camera Icon
         self.CamButton = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.CamButton.setText("")
         icon6 = QtGui.QIcon()
@@ -91,6 +103,8 @@ class Ui_MainWindow(object):
         self.gridLayout.addWidget(self.CamButton, 1, 1, 1, 1)
         self.WireSharkButton = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.WireSharkButton.setText("")
+
+        #Wireshark Icon
         icon7 = QtGui.QIcon()
         icon7.addPixmap(QtGui.QPixmap("Icons/WS_PNG.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.WireSharkButton.setIcon(icon7)
@@ -98,6 +112,8 @@ class Ui_MainWindow(object):
         self.WireSharkButton.setFlat(True)
         self.WireSharkButton.setObjectName("WireSharkButton")
         self.gridLayout.addWidget(self.WireSharkButton, 0, 0, 1, 1)
+
+        #VPN Icon
         self.VpnButton = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.VpnButton.setText("")
         icon8 = QtGui.QIcon()
@@ -107,6 +123,8 @@ class Ui_MainWindow(object):
         self.VpnButton.setFlat(True)
         self.VpnButton.setObjectName("VpnButton")
         self.gridLayout.addWidget(self.VpnButton, 0, 2, 1, 1)
+
+        #Background
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(-100, -20, 1011, 511))
         self.label.setText("")
@@ -131,7 +149,7 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
 
-    def clickMethod(self):
+    def clickDiscord(self):
         subprocess.Popen(['/snap/bin/discord'])
 
 if __name__ == "__main__":
