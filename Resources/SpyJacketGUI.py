@@ -8,6 +8,10 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 import sys
+from PyQt5.QtWidgets import QMainWindow, QLabel, QGridLayout, QWidget
+from PyQt5.QtWidgets import QPushButton
+from PyQt5.QtCore import QSize
+import subprocess
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -74,6 +78,7 @@ class Ui_MainWindow(object):
         self.DiscordButton.setIconSize(QtCore.QSize(78, 78))
         self.DiscordButton.setFlat(True)
         self.DiscordButton.setObjectName("DiscordButton")
+        self.DiscordButton.clicked.connect(self.clickMethod)
         self.gridLayout.addWidget(self.DiscordButton, 0, 4, 1, 1)
         self.CamButton = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.CamButton.setText("")
@@ -125,6 +130,9 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+
+    def clickMethod(self):
+        subprocess.Popen(['/snap/bin/discord'])
 
 if __name__ == "__main__":
 
