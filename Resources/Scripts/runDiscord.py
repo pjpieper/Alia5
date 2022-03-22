@@ -1,3 +1,4 @@
 import subprocess
 
-subprocess.Popen(['/snap/bin/discord'])
+def runDiscord():
+    subprocess.Popen(['/snap/bin/discord'])
