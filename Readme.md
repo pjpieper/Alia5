@@ -15,5 +15,5 @@ Alia5 uses IR LEDs to add input to cameras to confuse facial recognition softwar
 Most the files required are included within this repository.
 
 ## Dependencies
-TKinter
-PyQT5
+* TKinter
+* PyQT5
