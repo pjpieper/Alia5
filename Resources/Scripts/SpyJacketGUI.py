@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 # Form implementation generated from reading ui file 'SpyJacketGUI.ui'
 #
 # Created by: PyQt5 UI code generator 5.10.1
@@ -16,7 +15,6 @@ from PyQt5.QtWidgets import QPushButton
 from PyQt5.QtCore import QSize, QProcess
 import subprocess
 import runDiscord
-#import testytest
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -30,6 +28,8 @@ class Ui_MainWindow(object):
         self.gridLayout = QtWidgets.QGridLayout(self.gridLayoutWidget)
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
         self.gridLayout.setObjectName("gridLayout")
+
+        #LED Icon
         self.LedButton = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.LedButton.setText("")
         icon = QtGui.QIcon()
