@@ -9,7 +9,7 @@ Technology expands at a rapid pace, far beyond a government's control to properl
 Alia5 (pronounced Alias) is our attempt at rectifying some of the issues with facial recognition technology that society faces today, both within the United States and abroad, such as in China or the European Union. Using an onboard IR LED array, an embedded system utilizing a Raspberry Pi, a small but powerful rechargeable power bank, and a camera, we intend to give people the tools to counteract facial recognition software.
 
 ## How does it work?
-Alia5 uses IR LEDs to add input to cameras to confuse facial recognition software and facial mapping techniques. Facial recognition technology as well as facial mapping primarily use deep neural networks to identify individuals. Based on research (Source: https://arxiv.org/abs/1710.08864), even something as simple as a one pixel attack can defeat a wide array of recognition algorithms. Using this fact moving forward, our goal is to exploit this weakness, where the result is highly input dependent, by changing the input just enough to counteract facial recognition.
+Alia5 uses IR LEDs to add input to cameras to confuse facial recognition software and facial mapping techniques. Facial recognition technology as well as facial mapping primarily use deep neural networks to identify individuals. Based on research (Source: https://arxiv.org/abs/1710.08864), even something as simple as a one pixel attack can defeat a wide array of recognition algorithms. Using this fact moving forward, our goal is to exploit this weakness, where the result is highly input dependent, by changing the input just enough to defeat facial recognition.
 
 # Files
 Most the files required are included within this repository.
