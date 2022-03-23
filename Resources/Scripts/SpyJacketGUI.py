@@ -22,7 +22,10 @@ from PyQt5.QtCore import QSize, QProcess
 import subprocess
 import runDiscord
 
+# Class Definition
 class Ui_MainWindow(object):
+
+    #setupUi function
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(800, 480)
@@ -152,6 +155,7 @@ class Ui_MainWindow(object):
         self.label.setObjectName("label")
         self.label.raise_()
         self.gridLayoutWidget.raise_()
+
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 22))
@@ -160,38 +164,47 @@ class Ui_MainWindow(object):
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
-
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
+    # Function made to retranslate the UI for movement.
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
 
+    # Function for calling Discord application once clicked
     def clickDiscord(self):
         subprocess.Popen(['/snap/bin/discord'])
 
+    # Function for calling WireShark application once clicked
     def clickWireShark(self):
         subprocess.Popen(['/usr/bin/wireshark'])
 
+    # Function for calling ProtonVPN application once clicked
     def clickProtonVPN(self):
-        subprocess.Popen(['/usr/bin/protonVPN'])
+        subprocess.Popen(['/usr/bin/protonvpn'])
 
+    # Rip and Tear until its done.
     def clickDOOM(self):
         subprocess.Popen(['/usr/games/chocolate-doom'])
 
+    # Function for calling Google Earth applcation once clicked
     def clickMaps(self):
         os.system("google-earth-pro")
 
+    # Function that closes the GUI application to give user base-level OS access.
     def clickRasp(self):
         sys.exit()
 
+    # Function that runs LED_GUI.py script once clicked
     #def clickLed(self):
     #    os.system("python LED_GUI.py")
+
 
     #def clickCam(self):
     #    os.system("python Camera.py")
 
+# Main loop program
 if __name__ == "__main__":
 
     app = QtWidgets.QApplication(sys.argv)
