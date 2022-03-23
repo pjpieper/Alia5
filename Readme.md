@@ -5,7 +5,7 @@ This is a project intended to be displayed for the Kennesaw State University CPE
 
 ## What is Alia5?
 
-![](https://i.imgur.com/7j1C3WC.gif)
+![](https://i.imgur.com/7j1C3WC.gifv)
 
 Technology expands at a rapid pace, far beyond a government's control to properly regulate it. Compounding that issue is when government gets hold of said technology and uses it without truly understanding the consequences that entails. One such technology that threatens the ability for people to express their discontent or exercise their rights in a democracy is facial recognition software and technology.
 
