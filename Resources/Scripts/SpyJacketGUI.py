@@ -1,3 +1,9 @@
+# Author: Paul "DankLord" Pieper
+# Program: SpyJacketGUI.py
+# Scripts: LED_GUI.py, Camera.py
+# Dependencies: PyQt5, Tkinter
+# Sub-programs: Discord, Spotify, Google Earth, Doom, Wireshark, ProtonVPN
+
 # -*- coding: utf-8 -*-
 # Form implementation generated from reading ui file 'SpyJacketGUI.ui'
 #
@@ -141,7 +147,7 @@ class Ui_MainWindow(object):
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(-100, -20, 1011, 511))
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("../Backgrounds/itl.cat_vaporwave-wallpaper_25196.jpeg"))
+        self.label.setPixmap(QtGui.QPixmap("../Backgrounds/1d7e3c46d83b2e684bffcde8dd437159.png"))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.label.raise_()
