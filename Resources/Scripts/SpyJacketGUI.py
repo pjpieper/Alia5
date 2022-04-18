@@ -47,7 +47,7 @@ class Ui_MainWindow(object):
         self.LedButton.setIconSize(QtCore.QSize(78, 78))
         self.LedButton.setFlat(True)
         self.LedButton.setObjectName("LedButton")
-        #self.LedButton.clicked.connect(self.clickLed)
+        self.LedButton.clicked.connect(self.clickLed)
         self.gridLayout.addWidget(self.LedButton, 1, 0, 1, 1)
 
         #Maps Icon
@@ -174,7 +174,7 @@ class Ui_MainWindow(object):
 
     # Function for calling Discord application once clicked
     def clickDiscord(self):
-        subprocess.Popen(['/snap/bin/discord'])
+        subprocess.Popen(['/usr/bin/webcord'])
 
     # Function for calling WireShark application once clicked
     def clickWireShark(self):
@@ -197,8 +197,8 @@ class Ui_MainWindow(object):
         sys.exit()
 
     # Function that runs LED_GUI.py script once clicked
-    #def clickLed(self):
-    #    os.system("python LED_GUI.py")
+    def clickLed(self):
+        os.system("sudo python3 LED_GUI.py")
 
 
     #def clickCam(self):
