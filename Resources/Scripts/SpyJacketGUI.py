@@ -119,7 +119,7 @@ class Ui_MainWindow(object):
         self.CamButton.setIconSize(QtCore.QSize(78, 78))
         self.CamButton.setFlat(True)
         self.CamButton.setObjectName("CamButton")
-        #self.CamButton.clicked.connect(self.clickCam)
+        self.CamButton.clicked.connect(self.clickCam)
         self.gridLayout.addWidget(self.CamButton, 1, 1, 1, 1)
 
         #Wireshark Icon
@@ -201,8 +201,8 @@ class Ui_MainWindow(object):
         os.system("sudo python3 LED_GUI.py")
 
 
-    #def clickCam(self):
-    #    os.system("python Camera.py")
+    def clickCam(self):
+        os.system("python3 Camera_App.py")
 
 # Main loop program
 if __name__ == "__main__":

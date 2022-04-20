@@ -4,7 +4,7 @@ import tkinter as tk
 import lgpio as GPIO
 
 chip = GPIO.gpiochip_open(0)
-LED = 23
+LED = 21
 
 GPIO.gpio_claim_output(chip, LED)
 
