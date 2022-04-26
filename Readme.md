@@ -33,7 +33,7 @@ Most the files required are included within this repository.
 * PyQt5
 
 ## System Requirements
-* OS: Ubuntu 21.04
+* OS: Ubuntu 21.04 or later
 * System: Raspberry Pi 4
 * Memory: 4GB RAM
 
