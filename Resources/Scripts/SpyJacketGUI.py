@@ -28,11 +28,11 @@ class Ui_MainWindow(object):
     #setupUi function
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(800, 480)
+        MainWindow.resize(800, 600)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayoutWidget = QtWidgets.QWidget(self.centralwidget)
-        self.gridLayoutWidget.setGeometry(QtCore.QRect(70, 70, 671, 321))
+        self.gridLayoutWidget.setGeometry(QtCore.QRect(70, 120, 670, 320))
         self.gridLayoutWidget.setObjectName("gridLayoutWidget")
         self.gridLayout = QtWidgets.QGridLayout(self.gridLayoutWidget)
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
@@ -71,7 +71,7 @@ class Ui_MainWindow(object):
         self.SpotifyButton.setIconSize(QtCore.QSize(78, 78))
         self.SpotifyButton.setFlat(True)
         self.SpotifyButton.setObjectName("SpotifyButton")
-        #self.SpotifyButton.clicked.connect(self.clickSpotify)
+        self.SpotifyButton.clicked.connect(self.clickSpotify)
         self.gridLayout.addWidget(self.SpotifyButton, 0, 1, 1, 1)
 
         #Doom Icon
@@ -86,7 +86,7 @@ class Ui_MainWindow(object):
         self.DoomButton.clicked.connect(self.clickDOOM)
         self.gridLayout.addWidget(self.DoomButton, 0, 3, 1, 1)
 
-        #Raspberry Button
+        #Ubuntu Button
         self.RasButton = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.RasButton.setText("")
         icon4 = QtGui.QIcon()
@@ -148,7 +148,7 @@ class Ui_MainWindow(object):
 
         #Background
         self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(-100, -20, 1011, 511))
+        self.label.setGeometry(QtCore.QRect(-100, -20, 1011, 700))
         self.label.setText("")
         self.label.setPixmap(QtGui.QPixmap("../Backgrounds/1d7e3c46d83b2e684bffcde8dd437159.png"))
         self.label.setScaledContents(True)
@@ -161,9 +161,9 @@ class Ui_MainWindow(object):
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 22))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
-        self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
+        #self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        #self.statusbar.setObjectName("statusbar")
+        #MainWindow.setStatusBar(self.statusbar)
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
@@ -184,9 +184,13 @@ class Ui_MainWindow(object):
     def clickProtonVPN(self):
         subprocess.Popen(['/usr/bin/protonvpn'])
 
+    # Function for calling SpotifyQT application once clicked
+    def clickSpotify(self):
+        subprocess.Popen(['/snap/bin/spotify-qt'])
+
     # Rip and Tear until its done.
     def clickDOOM(self):
-        subprocess.Popen(['/usr/games/chocolate-doom'])
+        os.system("chocolate-doom -iwad /usr/games/DOOM.wad")
 
     # Function for calling Google Earth applcation once clicked
     def clickMaps(self):
@@ -211,5 +215,5 @@ if __name__ == "__main__":
     w = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
     ui.setupUi(w)
-    w.show()
+    w.showFullScreen()
     sys.exit(app.exec_())

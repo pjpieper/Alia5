@@ -16,7 +16,7 @@ class App:
         self.timer=ElapsedTimeClock(self.window)
 
         # open video source (by default this will try to open the computer webcam)
-        self.vid = VideoCapture(self.video_source)
+        self.vid = VideoCapture(0)
 
         # Create a canvas that can fit the above video source size
         self.canvas = tk.Canvas(window, width = self.vid.width, height = self.vid.height)
@@ -78,7 +78,7 @@ class App:
 
 
 class VideoCapture:
-    def __init__(self, video_source=0):
+    def __init__(self, video_source=-1):
         # Open the video source
         self.vid = cv2.VideoCapture(video_source)
         if not self.vid.isOpened():
