@@ -17,10 +17,30 @@ Alia5 uses IR LEDs to add input to cameras to confuse facial recognition softwar
 Most the files required are included within this repository.
 
 ## Dependencies
+### ALL
+* Python3
+
+### Camera App
 * TKinter
-* PyQT5
+* OpenCV
+* PIL aka Pillow
+
+### LED App
+* TKinter
+* LGPIO
+
+### Main Menu
+* PyQt5
 
 ## System Requirements
 * OS: Ubuntu 21.04
 * System: Raspberry Pi 4
 * Memory: 4GB RAM
+
+## Third Party Applications Supported
+* Chocolate Doom using the original DOOM.wad
+* Webcord for Discord
+* SpotifyQT for Spotify
+* Wireshark
+* nMap
+* ProtonVPN
