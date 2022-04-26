@@ -4,7 +4,7 @@
 This is a project intended to be displayed for the Kennesaw State University CPE 4850 Senior Design course. 
 
 ## What is Alia5?
-Technology expands at a rapid pace, far beyond a government's control to properly regulate it. Compounding that issue is when government gets hold of said technology and uses it without truly understanding the consequences that entails. One such technology that threatens the ability for people to express their discontent or exercise their rights in a democracy is facial recognition software and technology.
+Technology expands at a rapid pace, far beyond a government's control to properly regulate it. Compounding that issue is when government gets hold of said technology and uses it without truly understanding the consequences such technology entails. One such technology that threatens the ability for people to express their discontent or exercise their rights in a democracy is facial recognition software and technology.
 
 Alia5 (pronounced Alias) is our attempt at rectifying some of the issues with facial recognition technology that society faces today, both within the United States and abroad, such as in China or the European Union. Using an onboard IR LED array, an embedded system utilizing a Raspberry Pi, a small but powerful rechargeable power bank, and a camera, we intend to give people the tools to counteract facial recognition software.
 
