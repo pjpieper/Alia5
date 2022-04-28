@@ -13,14 +13,15 @@
 
 import sys
 import os
+import subprocess
+from pynput.keyboard import Key, Controller 
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QMainWindow, QLabel, QGridLayout, QWidget
 from PyQt5.QtWidgets import QPushButton
 from PyQt5.QtCore import QSize, QProcess
-import subprocess
-import runDiscord
+
 
 # Class Definition
 class Ui_MainWindow(object):
@@ -50,23 +51,23 @@ class Ui_MainWindow(object):
         self.LedButton.clicked.connect(self.clickLed)
         self.gridLayout.addWidget(self.LedButton, 1, 0, 1, 1)
 
-        #Maps Icon
-        self.MapsButton = QtWidgets.QPushButton(self.gridLayoutWidget)
-        self.MapsButton.setText("")
+        #Ghastly(Exit) Icon
+        self.GhastlyButton = QtWidgets.QPushButton(self.gridLayoutWidget)
+        self.GhastlyButton.setText("")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("../Icons/gougle.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.MapsButton.setIcon(icon1)
-        self.MapsButton.setIconSize(QtCore.QSize(78, 78))
-        self.MapsButton.setFlat(True)
-        self.MapsButton.setObjectName("MapsButton")
-        self.MapsButton.clicked.connect(self.clickMaps)
-        self.gridLayout.addWidget(self.MapsButton, 1, 3, 1, 1)
+        icon1.addPixmap(QtGui.QPixmap("../Icons/exitboi.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.GhastlyButton.setIcon(icon1)
+        self.GhastlyButton.setIconSize(QtCore.QSize(78, 78))
+        self.GhastlyButton.setFlat(True)
+        self.GhastlyButton.setObjectName("Exit GUI")
+        self.GhastlyButton.clicked.connect(self.clickGhastly)
+        self.gridLayout.addWidget(self.GhastlyButton, 1, 3, 1, 1)
 
         #Spotify Icon
         self.SpotifyButton = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.SpotifyButton.setText("")
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("../Icons/spotrify.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap("../Icons/spotifyboiz.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.SpotifyButton.setIcon(icon2)
         self.SpotifyButton.setIconSize(QtCore.QSize(78, 78))
         self.SpotifyButton.setFlat(True)
@@ -87,16 +88,16 @@ class Ui_MainWindow(object):
         self.gridLayout.addWidget(self.DoomButton, 0, 3, 1, 1)
 
         #Ubuntu Button
-        self.RasButton = QtWidgets.QPushButton(self.gridLayoutWidget)
-        self.RasButton.setText("")
+        self.UbuntuButton = QtWidgets.QPushButton(self.gridLayoutWidget)
+        self.UbuntuButton.setText("")
         icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap("../Icons/RasIcon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.RasButton.setIcon(icon4)
-        self.RasButton.setIconSize(QtCore.QSize(78, 78))
-        self.RasButton.setFlat(True)
-        self.RasButton.setObjectName("RasButton")
-        self.RasButton.clicked.connect(self.clickRasp)
-        self.gridLayout.addWidget(self.RasButton, 1, 2, 1, 1)
+        icon4.addPixmap(QtGui.QPixmap("../Icons/UbuntuButton.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.UbuntuButton.setIcon(icon4)
+        self.UbuntuButton.setIconSize(QtCore.QSize(78, 78))
+        self.UbuntuButton.setFlat(True)
+        self.UbuntuButton.setObjectName("Ubuntu")
+        self.UbuntuButton.clicked.connect(self.clickUbu)
+        self.gridLayout.addWidget(self.UbuntuButton, 1, 2, 1, 1)
 
         #Discord Icon
         self.DiscordButton = QtWidgets.QPushButton(self.gridLayoutWidget)
@@ -150,7 +151,7 @@ class Ui_MainWindow(object):
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(-100, -20, 1011, 700))
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("../Backgrounds/1d7e3c46d83b2e684bffcde8dd437159.png"))
+        self.label.setPixmap(QtGui.QPixmap("../Backgrounds/background.png"))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.label.raise_()
@@ -193,12 +194,17 @@ class Ui_MainWindow(object):
         os.system("chocolate-doom -iwad /usr/games/DOOM.wad")
 
     # Function for calling Google Earth applcation once clicked
-    def clickMaps(self):
-        os.system("google-earth-pro")
+    def clickGhastly(self):
+        sys.exit()
 
     # Function that closes the GUI application to give user base-level OS access.
-    def clickRasp(self):
-        sys.exit()
+    def clickUbu(self):
+        if w.windowState() & QtCore.Qt.WindowFullScreen:
+            w.showMinimized()
+            #w.showNormal()
+            #w.setGeometry(0, 0, 600, 875)
+        else:
+            w.showFullScreen()
 
     # Function that runs LED_GUI.py script once clicked
     def clickLed(self):
