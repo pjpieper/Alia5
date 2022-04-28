@@ -18,19 +18,19 @@ Most the files required are included within this repository.
 
 ## Dependencies
 ### ALL
-* Python3
+* Python3 ``sudo apt-get install python``
 
 ### Camera App
-* TKinter
-* OpenCV
-* PIL aka Pillow
+* TKinter ``sudo apt-get install python3-tk``
+* OpenCV ``pip install opencv-python``
+* PIL aka Pillow ``sudo apt-get install python3-pil python3-pil.imagetk``
 
 ### LED App
-* TKinter
-* LGPIO
+* TKinter ``sudo apt-get install python3-tk``
+* LGPIO ``sudo apt install python3-lgpio``
 
 ### Main Menu
-* PyQt5
+* PyQt5 - ``pip install pyqt5``
 
 ## System Requirements
 * OS: Ubuntu 21.04 or later
@@ -39,8 +39,20 @@ Most the files required are included within this repository.
 
 ## Third Party Applications Supported
 * Chocolate Doom using the original DOOM.wad
-* Webcord for Discord
-* SpotifyQT for Spotify
-* Wireshark
-* nMap
-* ProtonVPN
+* Webcord for Discord - via PiApps
+* SpotifyQT for Spotify - via PiApps
+* Wireshark - ``sudo apt install wireshark``
+* nMap - ``sudo apt install nmap``
+* ProtonVPN - https://protonvpn.com/support/linux-ubuntu-vpn-setup/
+
+#### Additional Installs
+* PyQt5 Tools
+``pip3 install --user pyqt5  
+sudo apt-get install python3-pyqt5  
+sudo apt-get install pyqt5-dev-tools
+sudo apt-get install qttools5-dev-tools``
+* Chocolate Doom
+``apt install chocolate-doom``
+To run original DOOM.wad, download the .wad, put it in the Chocolate Doom directory, then run as follows:
+``chocolate-doom -iwad /usr/games/DOOM.wad``
+
