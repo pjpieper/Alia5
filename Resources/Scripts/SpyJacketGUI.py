@@ -14,7 +14,6 @@
 import sys
 import os
 import subprocess
-from pynput.keyboard import Key, Controller 
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5 import QtCore, QtGui, QtWidgets
