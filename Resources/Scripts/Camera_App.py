@@ -56,16 +56,12 @@ class App:
         self.timer.start()
         print("camera opened => Recording")
 
-
-
     def close_camera(self):
         self.ok = False
         self.timer.stop()
         print("camera closed => Not Recording")
 
-       
     def update(self):
-
         # Get a frame from the video source
         ret, frame = self.vid.get_frame()
         if self.ok:
@@ -76,7 +72,6 @@ class App:
             self.canvas.create_image(0, 0, image = self.photo, anchor = tk.NW)
         self.window.after(self.delay,self.update)
 
-
 class VideoCapture:
     def __init__(self, video_source=-1):
         # Open the video source
@@ -86,10 +81,8 @@ class VideoCapture:
 
         # Command Line Parser
         args=CommandLineParser().args
-
         
         #create videowriter
-
         # 1. Video Type
         VIDEO_TYPE = {
             'avi': cv2.VideoWriter_fourcc(*'XVID'),
@@ -117,7 +110,6 @@ class VideoCapture:
         # Get video source width and height
         self.width,self.height=res
 
-
     # To get frames
     def get_frame(self):
         if self.vid.isOpened():
@@ -137,7 +129,6 @@ class VideoCapture:
             self.out.release()
             cv2.destroyAllWindows()
 
-
 class ElapsedTimeClock:
     def __init__(self,window):
         self.T=tk.Label(window,text='00:00:00',font=('times', 20, 'bold'), bg='green')
@@ -148,7 +139,6 @@ class ElapsedTimeClock:
         t = time.localtime()
         self.zeroTime = dt.timedelta(hours=t[3], minutes=t[4], seconds=t[5])
         # self.tick()
-
  
     def tick(self):
         # get the current local time from the PC
@@ -164,7 +154,6 @@ class ElapsedTimeClock:
         # could use >200 ms, but display gets jerky
         self.updwin=self.T.after(100, self.tick)
 
-
     def start(self):
             if not self.running:
                 self.zeroTime=dt.datetime(1, 1, 1).now()-self.elapsedTime
@@ -177,7 +166,6 @@ class ElapsedTimeClock:
                 self.elapsedTime=dt.datetime(1, 1, 1).now()-self.zeroTime
                 self.time2=self.elapsedTime
                 self.running=0
-
 
 class CommandLineParser:
     
@@ -202,8 +190,6 @@ class CommandLineParser:
         # Parse the arguments and get all the values in the form of namespace.
         # Here args is of namespace and values will be accessed through tag names
         self.args = parser.parse_args()
-
-
 
 def main():
     # Create a window and pass it to the Application object
