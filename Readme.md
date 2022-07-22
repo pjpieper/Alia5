@@ -1,5 +1,5 @@
 # Project Alia5 - C0D3
------------------------------------<img src="https://i.imgur.com/Bfi6vAU.png" alt="drawing" width="400"/></div>------------------------------------
+------------------------------------<img src="https://i.imgur.com/Bfi6vAU.png" alt="drawing" width="400"/></div>------------------------------------
 
 This is a project intended to be displayed for the Kennesaw State University CPE 4850 Senior Design course. 
 
